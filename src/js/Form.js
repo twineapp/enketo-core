@@ -401,16 +401,16 @@ define( [ 'enketo-js/FormModel', 'enketo-js/widgets', 'jquery', 'enketo-js/plugi
                 setSwipeHandlers: function() {
                     var that = this;
                     $( document ).on( 'swipeleft', function( event ) {
-                        if ( event.handled !== true ) {
-                            that.next();
-                            event.handled = true;
-                        }
+                        //if ( event.handled !== true ) {
+                        that.next();
+                        event.handled = true;
+                        //}
                         return false;
                     } ).on( 'swiperight', function( event ) {
-                        if ( event.handled !== true ) {
-                            that.prev();
-                            event.handled = true;
-                        }
+                        //if ( event.handled !== true ) {
+                        that.prev();
+                        event.handled = true;
+                        //}
                         return false;
                     } );
                 },
