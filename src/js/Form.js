@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-define( [ 'enketo-js/FormModel', 'enketo-js/widgets', 'jquery', 'enketo-js/plugins', 'enketo-js/extend', 'bootstrap' ],
+define( [ 'enketo-js/FormModel', 'enketo-js/widgets', 'jquery', 'enketo-js/plugins', 'enketo-js/extend', 'bootstrap', 'jquery.event.move', 'jquery.event.swipe' ],
     function( FormModel, widgets, $ ) {
         "use strict";
 
@@ -372,8 +372,7 @@ define( [ 'enketo-js/FormModel', 'enketo-js/widgets', 'jquery', 'enketo-js/plugi
                             this.setButtonHandlers();
                             this.setRepeatHandlers();
                             //this.setSwipeEvents();
-                            //this.setSwipeHandlers(); //not sure if this will work well enough in browser
-                            // a swipeleft may very well move to another tab 
+                            this.setSwipeHandlers();
                             this.active = true;
                         }
 
